@@ -96,12 +96,12 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>栈是一种数据结构，栈溢出是缓冲区溢出的一种，最经典的栈溢出是利用输入函数的字节数限制不合理或是无限制填充字符，进而修改返回地址从而执行函数从而getshell。具体内容将在下文讲解。</p>
-<h3 id="输入函数"><a href="#输入函数" class="headerlink" title="输入函数"></a>输入函数</h3><p>1.get（）</p>
-<p>2.scanf()  </p>
-<p>3.read()  </p>
+<h3 id="输入函数"><a href="#输入函数" class="headerlink" title="输入函数"></a>输入函数</h3><p>1.get</p>
+<p>2.scanf </p>
+<p>3.read </p>
 <p>4……</p>
-<h3 id="常利用的函数"><a href="#常利用的函数" class="headerlink" title="常利用的函数"></a>常利用的函数</h3><p>1.system（） </p>
-<p>2.execve（）  </p>
+<h3 id="常利用的函数"><a href="#常利用的函数" class="headerlink" title="常利用的函数"></a>常利用的函数</h3><p>1.system</p>
+<p>2.execve </p>
 <p>3…….</p>
 <h2 id="经典栈溢出实现的原因"><a href="#经典栈溢出实现的原因" class="headerlink" title="经典栈溢出实现的原因"></a>经典栈溢出实现的原因</h2><p>Why：在调用一个C语言函数时，最先入栈的是此时调用的函数的下一个函数的地址（就是返回地址），其次是函数的ebp，然后是变量（就是我们要输入的地方），这样的过程使函数按照顺序依次被调用。在经典栈溢出（以有system函数为例）中攻击者想要getshell，就是要使程序执行诸如system的函数，但大多时候程序存在system（）函数但却不会执行，利用栈溢出覆盖返回地址执行函数就是经典栈溢出的目的了。当攻击者输入字符将变量部分以及ebp都填充完了之后，下一步所填充的字符将会替代返回地址，这时如果将所要填充的字符替换为system（）函数的地址，程序就会执行system（）函数，从而getshell。</p>
 
