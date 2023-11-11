@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>HZY</title>
+  <title>《C和指针》读书笔记1-2 | HZY</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HZY">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="第一章《快速上手》预处理命令诸如#include&lt;stdio.h&gt;#difine PI 3.14被称为预处理命令 参数传递所有的标量和常量都是按值传递的 数组参数是以引用形式传递的 get函数例如get（input）  作用：从标准输入中读取字符串并存入input中，以换行符为结束输入的标志，抛弃换行符存储一个NUL字节，并返回一个非NULL的值，若无输入则返回NULL getchar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《C和指针》读书笔记1-2">
+<meta property="og:url" content="http://example.com/2023/11/11/%E3%80%8AC%E5%92%8C%E6%8C%87%E9%92%88%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-2/index.html">
 <meta property="og:site_name" content="HZY">
+<meta property="og:description" content="第一章《快速上手》预处理命令诸如#include&lt;stdio.h&gt;#difine PI 3.14被称为预处理命令 参数传递所有的标量和常量都是按值传递的 数组参数是以引用形式传递的 get函数例如get（input）  作用：从标准输入中读取字符串并存入input中，以换行符为结束输入的标志，抛弃换行符存储一个NUL字节，并返回一个非NULL的值，若无输入则返回NULL getchar">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-11T14:54:56.789Z">
+<meta property="article:modified_time" content="2023-11-11T17:13:37.976Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -71,9 +75,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-《C和指针》读书笔记1-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-《C和指针》读书笔记1-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/11/11/%E3%80%8AC%E5%92%8C%E6%8C%87%E9%92%88%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-2/" class="article-date">
   <time class="dt-published" datetime="2023-11-11T14:54:56.789Z" itemprop="datePublished">2023-11-11</time>
@@ -86,8 +88,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/11/%E3%80%8AC%E5%92%8C%E6%8C%87%E9%92%88%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01-2/">《C和指针》读书笔记1-2</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      《C和指针》读书笔记1-2
     </h1>
   
 
@@ -117,58 +119,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-栈溢出原理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/10/22/%E6%A0%88%E6%BA%A2%E5%87%BA%E5%8E%9F%E7%90%86/" class="article-date">
-  <time class="dt-published" datetime="2023-10-22T10:48:14.246Z" itemprop="datePublished">2023-10-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/10/22/%E6%A0%88%E6%BA%A2%E5%87%BA%E5%8E%9F%E7%90%86/">栈溢出原理</a>
-    </h1>
+    <a href="/2023/10/22/%E6%A0%88%E6%BA%A2%E5%87%BA%E5%8E%9F%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">栈溢出原理</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>栈是一种数据结构，栈溢出是缓冲区溢出的一种，最经典的栈溢出是利用输入函数的字节数限制不合理或是无限制填充字符，进而修改返回地址从而执行函数从而getshell。具体内容将在下文讲解。</p>
-<h3 id="输入函数"><a href="#输入函数" class="headerlink" title="输入函数"></a>输入函数</h3><p>1.get</p>
-<p>2.scanf </p>
-<p>3.read </p>
-<p>4……</p>
-<h3 id="常利用的函数"><a href="#常利用的函数" class="headerlink" title="常利用的函数"></a>常利用的函数</h3><p>1.system</p>
-<p>2.execve </p>
-<p>3…….</p>
-<h2 id="经典栈溢出实现的原因"><a href="#经典栈溢出实现的原因" class="headerlink" title="经典栈溢出实现的原因"></a>经典栈溢出实现的原因</h2><p>Why：在调用一个C语言函数时，最先入栈的是此时调用的函数的下一个函数的地址（就是返回地址），其次是函数的ebp，然后是变量（就是我们要输入的地方），这样的过程使函数按照顺序依次被调用。在经典栈溢出（以有system函数为例）中攻击者想要getshell，就是要使程序执行诸如system的函数，但大多时候程序存在system（）函数但却不会执行，利用栈溢出覆盖返回地址执行函数就是经典栈溢出的目的了。当攻击者输入字符将变量部分以及ebp都填充完了之后，下一步所填充的字符将会替代返回地址，这时如果将所要填充的字符替换为system（）函数的地址，程序就会执行system（）函数，从而getshell。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/22/%E6%A0%88%E6%BA%A2%E5%87%BA%E5%8E%9F%E7%90%86/" data-id="clo1cqs300001ektoh17idy92" data-title="栈溢出原理" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
 
 
 </section>
